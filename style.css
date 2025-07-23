@@ -2458,3 +2458,42 @@ html[lang="ar"] .search-modal-content .search-btn {
 }
 
 
+
+
+.preloader-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: var(--spacing-lg);
+  animation: fadeInScale 1.5s ease-out;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+
+.header-logo {
+  height: 50px; /* Adjust as needed */
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    height: 40px;
+  }
+}
+
+
+
+
+.footer-logo-img {
+  width: 80px; /* Adjust as needed */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+

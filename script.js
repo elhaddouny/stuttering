@@ -16,8 +16,8 @@ const PRODUCTS = [
       fr: 'Pain Marocain Traditionnel'
     },
     description: {
-      ar: 'خبز طازج مخبوز يومياً بالطريقة التقليدية.',
-      fr: 'Pain frais cuit quotidiennement de manière traditionnelle.'
+      ar: 'خبز طازج مخبوز يومياً بالطريقة التقليدية، مثالي لكل وجبة في مخبزتنا المحلية.',,
+      fr: 'Pain frais cuit quotidiennement de manière traditionnelle, parfait pour chaque repas.'
     },
     price: 5,
     image: 'images/bread.jpg',
@@ -35,8 +35,8 @@ const PRODUCTS = [
       fr: 'Chebakia au Miel'
     },
     description: {
-      ar: 'حلويات مغربية تقليدية مقرمشة ومغموسة بالعسل.',
-      fr: 'Pâtisserie marocaine traditionnelle croustillante et trempée dans le miel.'
+      ar: 'حلويات مغربية تقليدية مقرمشة ومعسلة، لا غنى عنها في مناسباتكم الخاصة.',,
+      fr: 'Pâtisserie marocaine traditionnelle croustillante et miellée, indispensable pour chaque occasion.'
     },
     price: 10,
     image: 'images/chebakia.jpg',
@@ -54,7 +54,7 @@ const PRODUCTS = [
       fr: 'Palmier'
     },
     description: {
-      ar: 'حلويات البالمي المقرمشة واللذيذة.',
+      ar: 'حلويات البالمي المقرمشة واللذيذة، خيار مثالي لوجبة خفيفة.',,
       fr: 'Délicieuses pâtisseries palmier croustillantes.'
     },
     price: 2,
@@ -73,7 +73,7 @@ const PRODUCTS = [
       fr: 'Ghriba aux Amandes'
     },
     description: {
-      ar: 'حلويات مغربية تقليدية مصنوعة باللوز.',
+      ar: 'حلويات مغربية تقليدية مصنوعة باللوز، تذوب في الفم مع كل قضمة.',,
       fr: 'Pâtisserie marocaine traditionnelle faite avec des amandes.'
     },
     price: 8,
@@ -240,7 +240,7 @@ const elements = {
   contactForm: null,
   newsletterForm: null,
   developerCredit: null,
-  developerProfileImage: null,
+
 };
 
 // ===== INITIALIZATION =====
@@ -278,8 +278,7 @@ function initializeElements() {
   elements.searchResults = document.getElementById('search-results');
   elements.contactForm = document.getElementById('contact-form');
   elements.newsletterForm = document.getElementById('newsletter-form');
-  elements.developerCredit = document.querySelector('.developer-credit a');
-  elements.developerProfileImage = document.getElementById('developer-profile-image');
+
 }
 
 async function initializeApp() {
@@ -306,15 +305,10 @@ async function initializeApp() {
       elements.currentYear.textContent = new Date().getFullYear();
     }
 
-    // Update developer credit link
-    if (elements.developerCredit) {
-      elements.developerCredit.href = CONFIG.facebookLink;
-    }
+
 
     // Show developer profile image on preloader
-    if (elements.developerProfileImage) {
-      elements.developerProfileImage.src = 'images/mohamed-profile.png';
-    }
+
     
     setTimeout(hidePreloader, 2000); // Keep preloader for 2 seconds for effect
     
