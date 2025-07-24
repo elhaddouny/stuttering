@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مخبزة وحلويات علاف - أجود أنواع المخبوزات والحلويات الطازجة يومياً. اطلب الآن واستمتع بالطعم الأصيل">
+    <meta name="keywords" content="مخبزة, حلويات, خبز, كرواسون, مسمن, كيك, علاف, مغرب">
+    <meta name="author" content="مخبزة علاف">
+    <meta property="og:title" content="مخبزة وحلويات علاف">
+    <meta property="og:description" content="أجود أنواع المخبوزات والحلويات الطازجة يومياً">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_MA">
+    
+    <title>مخبزة وحلويات علاف | المذاق الأصيل منذ 2024</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4E3GVNDGF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-R4E3GVNDGF');
+    </script>
+</head>
+<body>
+    <!-- شاشة التحميل -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="bakery-logo">
+                <i class="fas fa-bread-slice"></i>
+            </div>
+            <h2>مخبزة علاف</h2>
+            <div class="loading-spinner"></div>
+            <p>جاري تحضير أشهى المخبوزات...</p>
+        </div>
+    </div>
+
+    <!-- الهيدر -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- الشعار -->
+                <div class="logo-section">
+                    <div class="logo">
+                        <i class="fas fa-bread-slice"></i>
+                        <span>مخبزة علاف</span>
+                    </div>
+                    <p class="tagline">المذاق الأصيل منذ 2024</p>
+                </div>
+
+                <!-- القائمة الرئيسية -->
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="#products" class="nav-link">منتجاتنا</a></li>
+                    <li><a href="#about" class="nav-link">عن المخبزة</a></li>
+                    <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+                </ul>
+
+                <!-- أدوات التنقل -->
+                <div class="nav-tools">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="ai-chat-btn" onclick="toggleAIChat()">
+                        <i class="fas fa-robot"></i>
+                        <span>سارة</span>
+                    </button>
+                    <button class="menu-toggle" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- القسم الترحيبي -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-main">مرحباً بكم في مخبزة علاف</span>
+                    <span class="title-sub">حيث يلتقي التقليد بالإبداع</span>
+                </h1>
+                <p class="hero-description">
+                    نقدم لكم أجود أنواع المخبوزات والحلويات الطازجة يومياً، 
+                    مصنوعة بحب وعناية من أجود المكونات الطبيعية
+                </p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">
+                        <i class="fas fa-shopping-bag"></i>
+                        تصفح المنتجات
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        اطلب الآن
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="upload/1000100375.jpg" alt="مخبوزات طازجة" class="main-image">
+                    <div class="floating-elements">
+                        <div class="floating-item item-1">
+                            <i class="fas fa-bread-slice"></i>
+                        </div>
+                        <div class="floating-item item-2">
+                            <i class="fas fa-cookie-bite"></i>
+                        </div>
+                        <div class="floating-item item-3">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنتجات المميزة -->
+    <section id="featured-products" class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">منتجاتنا المميزة</h2>
+                <p class="section-subtitle">اكتشف مجموعة مختارة من أشهى منتجاتنا</p>
+            </div>
+            
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="card-image">
+                        <img src="upload/1000100374.jpg" alt="كرواسون زبدة">
+                        <div class="card-overlay">
+                            <button class="quick-add-btn" onclick="addToCart('كرواسون زبدة', 2, 'upload/1000100374.jpg')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">كرواسون زبدة</h3>
+                        <p class="card-description">كرواسون طازج ومقرمش محضر بالزبدة الطبيعية</p>
+                        <div class="card-price">2 درهم</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('كرواسون زبدة', 2, 'upload/1000100374.jpg')">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضف للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="card-image">
+                        <img src="upload/1000101444.jpg" alt="مسمن معسل">
+                        <div class="card-overlay">
+                            <button class="quick-add-btn" onclick="addToCart('مسمن معسل', 3.5, 'upload/1000101444.jpg')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">مسمن معسل</h3>
+                        <p class="card-description">مسمن تقليدي محضر بالعسل الطبيعي</p>
+                        <div class="card-price">3.5 درهم</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('مسمن معسل', 3.5, 'upload/1000101444.jpg')">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضف للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="card-image">
+                        <img src="upload/1000101446.jpg" alt="كيكة شوكولا">
+                        <div class="card-overlay">
+                            <button class="quick-add-btn" onclick="addToCart('كيكة شوكولا', 40, 'upload/1000101446.jpg')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">كيكة شوكولا</h3>
+                        <p class="card-description">كيكة شوكولا فاخرة مناسبة لجميع المناسبات</p>
+                        <div class="card-price">40 درهم</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('كيكة شوكولا', 40, 'upload/1000101446.jpg')">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضف للسلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم جميع المنتجات -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">جميع منتجاتنا</h2>
+                <p class="section-subtitle">تصفح مجموعتنا الكاملة من المخبوزات والحلويات</p>
+            </div>
+
+            <!-- فلاتر المنتجات -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="bakery">مخبوزات</button>
+                <button class="filter-btn" data-filter="sweets">حلويات</button>
+                <button class="filter-btn" data-filter="cakes">كيك</button>
+            </div>
+
+            <!-- شبكة المنتجات -->
+            <div class="products-grid" id="products-grid">
+                <!-- سيتم إضافة المنتجات هنا بواسطة JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عن المخبزة -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2 class="section-title">عن مخبزة علاف</h2>
+                        <p class="section-subtitle">قصة نجاح مليئة بالحب والإبداع</p>
+                    </div>
+                    
+                    <div class="about-description">
+                        <p>
+                            تأسست مخبزة علاف في عام 2024 برؤية واضحة: تقديم أجود أنواع المخبوزات والحلويات 
+                            الطازجة للعائلات المغربية. نحن نؤمن بأن الطعام الجيد يجمع الناس ويخلق ذكريات جميلة.
+                        </p>
+                        <p>
+                            نستخدم أجود المكونات الطبيعية ونتبع أساليب التحضير التقليدية مع لمسة عصرية، 
+                            لنضمن لكم تجربة طعم لا تُنسى في كل قضمة.
+                        </p>
+                    </div>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>جودة عالية</h4>
+                                <p>نستخدم أجود المكونات الطبيعية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>طازج يومياً</h4>
+                                <p>منتجات طازجة محضرة يومياً</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>صنع بحب</h4>
+                                <p>كل منتج محضر بعناية وحب</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="upload/1000101440.jpg" alt="مخبزة علاف">
+                    <div class="image-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">تواصل معنا</h2>
+                <p class="section-subtitle">نحن هنا لخدمتكم في أي وقت</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>واتساب</h4>
+                            <p>للطلب والاستفسار</p>
+                            <a href="https://wa.me/212681848262" target="_blank" class="contact-link">
+                                212681848262+
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>موقعنا</h4>
+                            <p>زورونا في المخبزة</p>
+                            <a href="https://maps.app.goo.gl/3QSaUA5nJiPQDRHZ9" target="_blank" class="contact-link">
+                                عرض على الخريطة
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>ساعات العمل</h4>
+                            <p>يومياً من 6:00 ص إلى 10:00 م</p>
+                            <span class="contact-link">مفتوح طوال الأسبوع</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>أرسل لنا رسالة</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="الاسم الكامل" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="رسالتك" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bread-slice"></i>
+                        <span>مخبزة علاف</span>
+                    </div>
+                    <p class="footer-description">
+                        مخبزة علاف - المذاق الأصيل منذ 2024. نقدم أجود أنواع المخبوزات والحلويات الطازجة يومياً.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/212681848262" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#products">منتجاتنا</a></li>
+                        <li><a href="#about">عن المخبزة</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>معلومات التواصل</h4>
+                    <div class="footer-contact">
+                        <p><i class="fab fa-whatsapp"></i> 212681848262+</p>
+                        <p><i class="fas fa-clock"></i> 6:00 ص - 10:00 م</p>
+                        <p><i class="fas fa-map-marker-alt"></i> المغرب</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 مخبزة علاف. جميع الحقوق محفوظة | Allaf.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- سلة التسوق -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> سلة التسوق</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div id="cart-items" class="cart-items">
+                <!-- سيتم إضافة المنتجات هنا -->
+            </div>
+            <div class="cart-empty" id="cart-empty">
+                <i class="fas fa-shopping-cart"></i>
+                <p>السلة فارغة</p>
+                <p>أضف بعض المنتجات الشهية!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>المجموع: <strong id="cart-total">0 درهم</strong></span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                <i class="fab fa-whatsapp"></i>
+                إرسال الطلب
+            </button>
+        </div>
+    </div>
+
+    <!-- بوت الذكاء الاصطناعي -->
+    <div id="ai-chat" class="ai-chat">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-info">
+                <h4>سارة - مساعدة مخبزة علاف</h4>
+                <span class="chat-status">متصلة</span>
+            </div>
+            <button class="close-chat" onclick="toggleAIChat()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>مرحباً! أنا سارة، مساعدتك الذكية في مخبزة علاف. كيف يمكنني مساعدتك اليوم؟</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="اكتب رسالتك هنا...">
+            <button id="send-message" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+        
+        <div class="quick-actions">
+            <button class="quick-action" onclick="askAI('ما هي منتجاتكم المميزة؟')">
+                منتجاتنا المميزة
+            </button>
+            <button class="quick-action" onclick="askAI('كيف يمكنني الطلب؟')">
+                كيفية الطلب
+            </button>
+            <button class="quick-action" onclick="askAI('ما هي أسعاركم؟')">
+                الأسعار
+            </button>
+        </div>
+    </div>
+
+    <!-- زر العودة للأعلى -->
+    <button id="back-to-top" class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
